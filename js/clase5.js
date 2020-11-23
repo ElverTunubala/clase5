@@ -9,10 +9,10 @@ const valorPc= 820000;
 
 function Calcular(){
     document.getElementById('Venta').style.display="none" /*Ocultar contenedor de orden de compra */
-    document.getElementById('OrdenC').style.display="none" /*Ocultar contenedor de orden de compra */
+    document.getElementById('OrdenC').style.display="block" /*Ocultar contenedor de orden de compra */
 
     /*Asignar valor a cantidad de computadores comprados */
-    numeroPc= Number(document.getElementById('Compra').value);
+    numeroPc= Number(document.getElementById('compra').value);
 
     //invocar función
     valorCompra =  valorCom(numeroPc);
@@ -27,13 +27,13 @@ function Calcular(){
 // uso de FUNCIÓN ANONIMA
 var valorCom= function(numeroPc){
     valorCompra= valorPc * numeroPc;
-    alert('El valor de compara es:' + valorCompra)
+    //alert('El valor de compara es:' + valorCompra)
     return valorCompra;
 }
 
 //Uso de funcion 
 function Descuento(valorCompra){
     descuento= valorCompra * 0.15;
-    alert('El descuento es:' + descuento )
+    //alert('El descuento es:' + descuento )
     return descuento; 
 }
